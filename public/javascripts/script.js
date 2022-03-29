@@ -7,7 +7,8 @@ var app = new Vue({
   methods: {
     fetchREST() {
       console.log("In Fetch " + this.prefix);
-      var url = "http://bioresearch.byu.edu/cs260/jquery/getcity.cgi?q=" + this.prefix;
+    //   var url = "http://bioresearch.byu.edu/cs260/jquery/getcity.cgi?q=" + this.prefix;
+      var url = "http://localhost:3000/city/?q=" + this.prefix;
       console.log("URL " + url);
       fetch(url)
         .then((data) => {
